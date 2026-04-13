@@ -80,3 +80,34 @@ tolerations: []
 
 # Default affinity is to spread out over nodes; use this to override.
 affinity: {}
+
+# PodDisruptionBudget for graceful voluntary evictions (node drains, descheduler).
+# Disabled by default to preserve upstream behavior. Set enabled: true and one of
+# minAvailable / maxUnavailable.
+podDisruptionBudget:
+  enabled: false
+  # minAvailable: 1
+  # maxUnavailable: 1
+
+# Metrics exposure. cloudflared always listens on :2000 for /metrics and /ready.
+# When metrics.enabled is true we render a ClusterIP Service targeting that port,
+# and optionally a Prometheus Operator ServiceMonitor.
+metrics:
+  enabled: false
+  service:
+    type: ClusterIP
+    port: 2000
+    annotations: {}
+    labels: {}
+  serviceMonitor:
+    enabled: false
+    # Namespace the ServiceMonitor is created in; defaults to release namespace.
+    namespace: ""
+    interval: 30s
+    scrapeTimeout: 10s
+    # Extra labels on the ServiceMonitor (e.g. for Prometheus Operator selector).
+    labels: {}
+    # Honor labels from the scraped target.
+    honorLabels: false
+    relabelings: []
+    metricRelabelings: []
