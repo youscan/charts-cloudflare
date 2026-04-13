@@ -3,6 +3,17 @@ entries:
   cloudflare-tunnel:
   - apiVersion: v2
     appVersion: 2024.8.3
+    created: "2026-04-13T09:15:27.335156744Z"
+    description: Creation of a cloudflared deployment - a reverse tunnel for an environment
+    digest: 4eec6adcf84fe9bf6e20ed9aaacd27805caf43f56b87f622f99389b1bc7c8da4
+    icon: https://developers.cloudflare.com/cloudflare-one/favicon-32x32.png
+    name: cloudflare-tunnel
+    type: application
+    urls:
+    - https://github.com/youscan/charts-cloudflare/releases/download/cloudflare-tunnel-0.4.0/cloudflare-tunnel-0.4.0.tgz
+    version: 0.4.0
+  - apiVersion: v2
+    appVersion: 2024.8.3
     created: "2026-04-13T08:54:35.91477082Z"
     description: Creation of a cloudflared deployment - a reverse tunnel for an environment
     digest: 983019b06c4e7731c7877a0fdc8947ec3754e6947141f007b1d34e4567870734
@@ -25,4 +36,4 @@ entries:
     urls:
     - https://github.com/youscan/charts-cloudflare/releases/download/cloudflare-tunnel-remote-0.1.2/cloudflare-tunnel-remote-0.1.2.tgz
     version: 0.1.2
-generated: "2026-04-13T08:54:36.069937314Z"
+generated: "2026-04-13T09:15:27.335166999Z"
